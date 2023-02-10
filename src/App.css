@@ -1,0 +1,198 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  background-image: linear-gradient(79deg, #15d186, #97def0 48%, #ebf6ff);
+  text-align: center;
+  justify-content: center;
+
+ /* background-image: url("/home/malshani/Downloads/teaching.jpg"); */
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+}
+
+.auth-form-container, .login-form, .register-form{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+@media screen and (min-width: 600px) {
+  .auth-form-container{
+    padding: 5rem;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 3rem;
+  }
+}
+
+
+label{
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input, select{
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+
+}
+
+button{
+  border: none;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.loginbtn, .registerbtn{
+  background-color: white;
+  color: black;
+  border: 2px solid #2af331;
+}
+
+.loginbtn:hover {
+  background-color: #2af331;
+  color: white;
+}
+
+.registerbtn:hover {
+  background-color: #2af331;
+  color: white;
+}
+
+.link-button{
+  background: none;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+p {
+  color: red;
+  font-size: smaller;
+}
+
+#title {
+  color: #fbf6f6;
+  background-color: #808d9b;
+  font-size: 36px;
+  text-shadow: 2px 2px #fbf9f9;
+  font-family: 'Lobster', cursive;
+  animation: animateText 2s;
+  text-align: center;
+}
+@keyframes animateText {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 600px) {
+  #title {
+    font-size: 30px;
+  }
+}
+
+.title-home-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #808d9b;
+  margin-top: 2%;
+}
+
+
+#hr{
+  margin-top: 5%;
+}
+
+#card {
+  position: relative;
+  width: 320px;
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#upper-side {
+  padding: 2em;
+  background-color: #8BC34A;
+  display: block;
+  color: #fff;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+#checkmark {
+  font-weight: lighter;
+  fill: #fff;
+  margin: -3.5em auto auto 20px;
+}
+
+#status {
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+  margin-top: -.2em;
+  margin-bottom: 0;
+}
+
+#lower-side {
+  padding: 2em 2em 5em 2em;
+  background: #fff;
+  display: block;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#message {
+  margin-top: -.5em;
+  color: #757575;
+  letter-spacing: 1px;
+}
+
+#contBtn {
+  position: relative;
+  top: 1.5em;
+  text-decoration: none;
+  background: #8bc34a;
+  color: #fff;
+  margin: auto;
+  padding: .8em 3em;
+  -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+  -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+  box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+  border-radius: 25px;
+  -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+#contBtn:hover {
+  -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+  box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+  -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #f6d365;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+  }
