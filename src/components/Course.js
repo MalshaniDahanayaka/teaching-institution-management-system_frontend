@@ -12,16 +12,7 @@ export const Course = ({id,courseID,courseName,timeSlot,description,teacher}) =>
           <h5 className="card-title" id={`card-title-${courseID}`}>{courseName}</h5>
           <p className="card-text">{description}</p>
           <div style={{ display: 'flex' }}>
-            <Link
-            //   to={{
-            //    // pathname: 'DetailedCourseView',
-            //     query: {
-            //      // id, date, title, description, imageUrl, content, author, url,
-            //     },
-  
-            //   }}
-            //   onClick={() => saveItem(title)}
-            >
+            <Link>
 
               <a href="#" className="btn btn-sm btn-info d-sm-none d-md-block">Show More</a>
 
