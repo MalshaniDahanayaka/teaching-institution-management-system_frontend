@@ -6,6 +6,8 @@ import SignupSuccess from './components/SignupSuccess';
 import { Switch } from 'react-router-dom';
 import './App.css';
 import { UserProfilePage } from './pages/UserProfilePage';
+import { AboutUs } from './pages/AboutUs';
+import AllUsersPage from './pages/Dashboard/AllUsersPage';
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
         <Route exact path='/signup' component={SignupPage} />
         <Route exact path='/signup-success' component={SignupSuccess} />
         <Route exact path='/profile' component={UserProfilePage} />
+        <Route exact path='/aboutUs' component={AboutUs} />
+        <Route exact path='/dashboard' component={AllUsersPage} />
       </Switch>  
   </Router>
   );

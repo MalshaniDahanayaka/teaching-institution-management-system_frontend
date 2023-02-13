@@ -11,7 +11,7 @@ class Repository{
     instance = undefined;
 
     constructor(){
-        this.#BaseUrl = "http://localhost:8090/api";
+        this.#BaseUrl = "http://localhost:8095/api";
         this.jwt = localStorage.getItem('jwt');
         
         
@@ -23,7 +23,6 @@ class Repository{
     }
 
     
-
     async signupUser(user) {
         try {
           const res = await this.instance.post(`${this.#BaseUrl}/v1/signup`, user);
@@ -74,6 +73,32 @@ class Repository{
       try {
           
         const res = await this.instance.get(`${this.#BaseUrl}/teacher/profile/${currentUser}`);
+        return res.data;
+      } catch (err) {
+        throw err;
+
+      }
+
+    }
+
+    async getAllStudents(){
+
+      try {
+          
+        const res = await this.instance.get(`${this.#BaseUrl}/managementTeam/allStudents`);
+        return res.data;
+      } catch (err) {
+        throw err;
+
+      }
+
+    }
+
+    async getAllTeachers(){
+
+      try {
+          
+        const res = await this.instance.get(`${this.#BaseUrl}/managementTeam/allTeachers`);
         return res.data;
       } catch (err) {
         throw err;

@@ -36,7 +36,14 @@ export const LoginPage = (props) => {
                     console.log("userRole" + data.userRole)
                     console.log("message"+ data.userRole);
                     if(data.jwtToken != undefined){
-                       history.push('/');
+
+                        if(data.userRole === "Admin"){
+
+                            history.push('/dashboard');
+                        }else{
+                            history.push('/');
+                        }
+                      
                     }else{
                         setStatus(data.message)
                     }
@@ -62,9 +69,9 @@ export const LoginPage = (props) => {
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="******" id="password" name="password" />
         <button className="loginbtn" type="Submit"><b>Log In</b></button>
     </form>
-
-    <h3>Don't have an account?</h3>
-    <Link to="/signup" className="link-button"><h4>Register here</h4></Link>
+    <br/>
+    <h4>Don't have an account?</h4>
+    <Link to="/signup" className="link-button"><h5>Register here</h5></Link>
 
     </div>
     </div>
