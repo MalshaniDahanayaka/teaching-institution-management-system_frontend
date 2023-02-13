@@ -13,7 +13,7 @@ const HomePageImage = () => {
       justifyContent: 'center',
       alignItems: 'center',
     }}>
-      <h1 style={{ color: 'white' }}>Welcome to my Home Page</h1>
+      <h1 style={{ color: 'white' }}>Welcome to Home Page</h1>
     </div>
   );
 };
