@@ -71,21 +71,17 @@ export const SignupPage = (props) => {
             <input value={lastName} onChange={(e) => setLastName(e.target.value)} name="lastName" id="lastName" placeholder="Last Name"/>
             {errors.lastName && <p className="error">{errors.lastName}</p>}
 
-
             <label htmlFor="username">Username</label>
             <input value={username} onChange={(e) => setUsername(e.target.value)} name="username" id="username" placeholder="Username"/>
             {errors.username && <p className="error">{errors.username}</p>}
-
 
             <label htmlFor="email">Email</label>
             <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
             {errors.email && <p className="error">{errors.email}</p>}
 
-
             <label htmlFor="password">password</label>
             <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="******" id="password" name="password" />
             {errors.password && <p className="error">{errors.password}</p>}
-
 
             <label htmlFor="role">Role</label>
             <select value={role} onChange={e => setRole(e.target.value)}>
@@ -101,9 +97,9 @@ export const SignupPage = (props) => {
         
             <button className="registerbtn" type="Submit" onClick={handleSubmit}><b>Register</b></button>
         </form>
-
-        <h3>Already have an account?</h3>
-        <Link to="/login" className="link-button"><h4>Login here</h4></Link>
+        <br/>
+        <h4>Already have an account?</h4>
+        <Link to="/login" className="link-button"><h5>Login here</h5></Link>
 
         </div>
         </div>
