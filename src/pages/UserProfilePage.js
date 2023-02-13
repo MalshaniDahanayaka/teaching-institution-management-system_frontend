@@ -4,6 +4,7 @@ import '../App.css';
 import { Link, useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import Navigationbar from '../components/NavigationBar'
+import ProfilePhoto from "../components/ProfilePhoto";
 
 
 export const UserProfilePage = (props) => {
@@ -24,7 +25,7 @@ export const UserProfilePage = (props) => {
 
     useEffect(() => {
 
-        if(userRole == "Student"){
+        if(userRole === "Student"){
             console.log("awaaa");
             Repository.getStuentProfile(currentUser)
             .then(data => {
@@ -41,7 +42,7 @@ export const UserProfilePage = (props) => {
               console.log("not data showing...")
             });
 
-        }else if(userRole == "Teacher"){
+        }else if(userRole === "Teacher"){
 
             Repository.getTeacherProfile(currentUser)
             .then(data => {
@@ -62,9 +63,6 @@ export const UserProfilePage = (props) => {
      
       },  [location.currentUser]);
 
-
-
-
     return ( 
 
       <div>
@@ -77,8 +75,10 @@ export const UserProfilePage = (props) => {
                 <div className="row g-0"  style={{borderRadius: ".5rem",height: "600px",width:"800px"}}>
                   <div className="col-md-4 gradient-custom text-center text-white"
                     style={{borderTopLeftRadius: ".5rem", borderBottomLeftRadius: ".5rem"}}>
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                      alt="Profile Picture" className="img-fluid my-5" style={{width: "80px", borderRadius: "50%"}} />
+                    {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                      alt="Profile Picture" className="img-fluid my-5" style={{width: "80px", borderRadius: "50%"}} /> */}
+                      <ProfilePhoto firstName={firstName} lastName={lastName} />
+                        <br/>
                     <h5>{firstName}<br />{lastName}</h5>
                     <i className="fas fa-edit mb-5"></i>
                   </div>
@@ -106,11 +106,6 @@ export const UserProfilePage = (props) => {
                           <h6>User ID</h6>
                           <p className="text-muted">{userID}</p>
                         </div>
-                      </div>
-                      <div className="d-flex justify-content-start">
-                        <a href="#!"><i className="fab fa-facebook-f fa-lg mr-3"></i></a>
-                        <a href="#!"><i className="fab fa-twitter fa-lg mr-3"></i></a>
-                        <a href="#!"><i className="fab faa-instagram fa-lg"></i></a>
                       </div>
                     </div>
                     </div>
