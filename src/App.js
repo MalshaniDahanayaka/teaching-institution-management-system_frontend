@@ -6,7 +6,7 @@ import SignupSuccess from './components/SignupSuccess';
 import { Switch } from 'react-router-dom';
 import './App.css';
 import { UserProfilePage } from './pages/UserProfilePage';
-// import { AboutUs } from './pages/AboutUs';
+import { AboutUs } from './pages/AboutUs';
 import AdminDashHomePage from './pages/AdminDashboard/AdminDashHomePage';
 import AllCoursesPage from './pages/AdminDashboard/AllCoursesPage';
 import AllUsersPage from './pages/AdminDashboard/AllUsersPage';
@@ -29,8 +29,7 @@ function App() {
         <Route exact path='/signup' component={SignupPage} />
         <Route exact path='/signup-success' component={SignupSuccess} />
         <Route exact path='/profile' component={UserProfilePage} />
-
-        {/* <Route exact path='/aboutUs' component={AboutUs} /> */}
+        <Route exact path='/aboutUs' component={AboutUs} />
         <Route exact path='/dashboard' component={AllUsersPage} />
         <Route exact path='/dash-home' component={AdminDashHomePage} />
         <Route exact path='/courses' component={AllCoursesPage} />

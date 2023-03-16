@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif
+}
+
+html,
+body {
+    height: 100%
+}
+
+.Course-details {
+    display: grid;
+    place-items: center;
+    background: #ffffff
+}
+
+.c-card {
+    color: #fff;
+    width: 400px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #1a6a83, #20809d);
+    box-shadow: 20px 20px 60px #ffffff,
+        -20px -20px 60px #ffffff;
+    border: none
+}
+
+.neo-button {
+    width: 40px;
+    height: 40px;
+    outline: 0 !important;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #20809d, #20809d);
+    box-shadow: inset 20px 20px 60px #20809d,
+        inset -20px -20px 60px #20809d;
+}
+
+.num {
+
+    color: #eee !important;
+}
+
+.line {
+    color: #fff;
+}
+
+.neo-button:active {
+    border-radius: 50%;
+    background: #20809d;
+    box-shadow: 28px 28px 57px #20809d,
+        -28px -28px 57px #20809d;
+}
+
+
+.profile_button {
+    color: #20809d;
+    padding: 10px;
+    border: none;
+    outline: 0 !important;
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow: 28px 28px 57px #20809d,
+        -28px -28px 57px #20809d;
+
+}
+
+.profile_button:hover {
+    background-color: #2af331;
+    color: white;
+}
+
+#enrolled-button {
+    background-color: #2af331;
+    color: white;
+}
+
+#Unenroll-btn {
+    background-color: #ffffff;
+    color: #f32a2a;
+}
+
+#Unenroll-btn:hover {
+    background-color: #f32a2a;
+    color: white;
+}
