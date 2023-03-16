@@ -11,7 +11,7 @@ class Repository {
   instance = undefined;
 
   constructor() {
-    this.#BaseUrl = "http://localhost:8096/api";
+    this.#BaseUrl = "http://localhost:8095/api";
     this.jwt = localStorage.getItem('jwt');
 
 
