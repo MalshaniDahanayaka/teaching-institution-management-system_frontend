@@ -19,7 +19,6 @@ import ShowStudentsPage from './pages/ShowStudentsPage';
 import EnrolledStudents from './pages/AdminDashboard/EnrolledStudents';
 import Unauthorized from './pages/Unauthorized';
 
-
 function App() {
 
   return (
@@ -30,6 +29,7 @@ function App() {
         <Route exact path='/signup' component={SignupPage} />
         <Route exact path='/signup-success' component={SignupSuccess} />
         <Route exact path='/profile' component={UserProfilePage} />
+
         {/* <Route exact path='/aboutUs' component={AboutUs} /> */}
         <Route exact path='/dashboard' component={AllUsersPage} />
         <Route exact path='/dash-home' component={AdminDashHomePage} />
@@ -44,6 +44,8 @@ function App() {
         <Route exact path='/error' component={Unauthorized} />
       </Switch>
     </Router>
+
+        
   );
 }
 
