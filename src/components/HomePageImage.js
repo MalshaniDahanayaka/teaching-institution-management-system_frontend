@@ -7,13 +7,13 @@ const HomePageImage = () => {
       backgroundImage: `url(${HomeImage})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '60vh',
+      height: '100vh',
       width: '100vw',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
     }}>
-      <h1 style={{ color: 'white' }}>Welcome to my Home Page</h1>
+      <h1 style={{ color: 'white',fontSize:"60px"}}>Welcome to Home Page</h1>
     </div>
   );
 };
