@@ -14,7 +14,7 @@ const ProfilePhoto = ({ firstName, lastName }) => {
       fontSize: '50px',
       fontWeight: 'bold',
       color: '#333',
-      marginLeft: '3.3vw',
+      marginLeft: '4.0vw',
       marginTop: '3.3vw'
     }}>
       {initials}

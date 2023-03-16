@@ -6,19 +6,21 @@
   text-align: center;
   justify-content: center;
 
- /* background-image: url("/home/malshani/Downloads/teaching.jpg"); */
- background-repeat: no-repeat;
- background-size: 100% 100%;
+  /* background-image: url("/home/malshani/Downloads/teaching.jpg"); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.auth-form-container, .login-form, .register-form{
-    display: flex;
-    flex-direction: column;
-  
+.auth-form-container,
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+
 }
 
 @media screen and (min-width: 600px) {
-  .auth-form-container{
+  .auth-form-container {
     padding: 5rem;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
@@ -27,12 +29,13 @@
 }
 
 
-label{
+label {
   text-align: left;
   padding: 0.25rem 0;
 }
 
-input, select{
+input,
+select {
   margin: 0.5rem 0;
   padding: 1rem;
   border: none;
@@ -40,7 +43,7 @@ input, select{
 
 }
 
-button{
+button {
   border: none;
   background-color: white;
   padding: 20px;
@@ -49,7 +52,8 @@ button{
   color: black;
 }
 
-.loginbtn, .registerbtn{
+.loginbtn,
+.registerbtn {
   background-color: white;
   color: black;
   border: 2px solid #2af331;
@@ -65,7 +69,7 @@ button{
   color: white;
 }
 
-.link-button{
+.link-button {
   background: none;
   color: rgb(0, 0, 0);
   text-decoration: underline;
@@ -78,37 +82,40 @@ p {
 
 #title {
   color: #fbf6f6;
-  background-color: #808d9b;
+  background-color: #20809d;
   font-size: 36px;
   text-shadow: 2px 2px #fbf9f9;
   font-family: 'Lobster', cursive;
   animation: animateText 2s;
   text-align: center;
 }
+
 @keyframes animateText {
-  0%{
+  0% {
     transform: scale(0);
   }
-  100%{
+
+  100% {
     transform: scale(1);
   }
 }
+
 @media only screen and (max-width: 600px) {
   #title {
     font-size: 30px;
   }
 }
 
-.title-home-page{
+.title-home-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #808d9b;
+  background-color: #20809d;
   margin-top: 2%;
 }
 
 
-#hr{
+#hr {
   margin-top: 5%;
 }
 
@@ -172,27 +179,25 @@ p {
   box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
   border-radius: 25px;
   -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
 }
+
 #contBtn:hover {
   -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
   -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
   box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
   -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .gradient-custom {
   /* fallback for old browsers */
-  background: #f6d365;
-  
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
-  
+  background: #20809d;
+
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
-  }
+  background: linear-gradient(to right bottom, #20809d, #20809d)
+}

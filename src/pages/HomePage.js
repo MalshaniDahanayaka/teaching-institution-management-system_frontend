@@ -8,33 +8,31 @@ import { Course } from '../components/Course';
 
 export const HomePage = () => {
 
-    const [courses, setCourses] = useState([]);
-    const [isPending, setIsPending] = useState(true);
+  const [courses, setCourses] = useState([]);
+  const [isPending, setIsPending] = useState(true);
 
-  
-    useEffect(() => {
-      Repository.showAllCourses()
-        .then(data => {
-          setCourses(data);
-          console.log(data);
-          setIsPending(false);  
-        })
-        .catch(error => {
-          throw error;
-          console.log("not data showing...")
-        });
-    }, []);
+  useEffect(() => {
+    Repository.showAllCourses()
+      .then(data => {
+        setCourses(data);
+        setIsPending(false);
+      })
+      .catch(error => {
+        throw error;
+      });
+  }, []);
 
 
-    return ( 
+  return (
     <div>
-        <Navigationbar />
-        <hr />
-        <HomePageImage />
-        <div class="title-home-page"> <h1 class="wow slideInLeft" id="title">All Courses</h1> </div>
+      <Navigationbar />
+      <hr />
+      <HomePageImage />
+      <div className="title-home-page">
+        <h1 className="wow slideInLeft" id="title">All Courses</h1>
+      </div>
 
-
-        <hr id="hr" />
+      <hr id="hr" />
 
       {isPending ? (
         <div className="d-flex justify-content-center">
@@ -43,26 +41,26 @@ export const HomePage = () => {
       ) : (
         <div className="row">
           {courses.map((course, index) => (
-              <div className="col-12 col-sm-8 col-md-4" key={course.courseID}>
-                <div className="card">
-                  <div className="card-body">
-                    <Course
-                      id={index}
-                      courseID={course.courseID}
-                      courseName={course.courseName}
-                      timeSlot={course.timeSlot}
-                      description={course.aboutCourse}
-                      teacher={course.teacher}
-                    />
-                  </div>
+            <div className="col-12 col-sm-8 col-md-4" key={course.courseID}>
+              <div className="card">
+                <div className="card-body">
+                  <Course
+                    id={index}
+                    courseID={course.courseID}
+                    courseName={course.courseName}
+                    timeSlot={course.timeSlot}
+                    aboutCourse={course.aboutCourse}
+                    teacher={course.teacher}
+                  />
                 </div>
               </div>
-      ))}
+            </div>
+          ))}
         </div>
       )}
 
 
 
-    </div> );
+    </div>);
 }
- 
+

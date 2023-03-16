@@ -1,8 +1,21 @@
 import React from 'react';
 import '../App.css'
 import { Link } from 'react-router-dom';
+import { useEffect } from "react";
+import { useHistory } from 'react-router-dom';
 
-const SignupSuccess = () => {
+export const CreateCourseSuccess = () => {
+
+  const userRole = localStorage.getItem('userRole');
+  const history = useHistory();
+
+
+  useEffect(() => {
+    if (userRole !== "Admin") {
+        history.push("/error");
+    }
+}, [history,userRole]);
+
   return (
     <div id='card' className="animated fadeIn" style={{
       marginTop: '10vw',
@@ -25,13 +38,12 @@ C131.967,94.755,132.296,93.271,131.583,92.152z" />
       </div>
       <div id='lower-side'>
         <p id='message'>
-          Congratulations, your account has been successfully created.
+          Course is successfully created.
         </p>
-        <Link to="/login" href="#" id="contBtn">Continue</Link>
+        <Link to="/dash-home" href="#" id="contBtn">Continue</Link>
       </div>
     </div>
 
   );
 };
 
-export default SignupSuccess;
